@@ -1,0 +1,33 @@
+.teamdiv {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.teambutt {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.parent {
+    width: 100vw;
+    padding: 8vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4vh;
+    grid-auto-rows: minmax(14vw, auto);
+}
+
+.wrapper{
+    width: 100vw;
+    
+}
+
+.h1 {
+    text-align: center;
+}
+
+body{
+    width: 100vw;
+}
