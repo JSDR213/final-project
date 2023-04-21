@@ -18,20 +18,20 @@ for (let i = 1; i <= 30; i++) {
     newDiv.className = 'teamdiv'
     newButt.setAttribute("src", `https://a.espncdn.com/i/teamlogos/mlb/500/${shortNames[i]}.png`)
     newButt.id = i
-    newButt.className = 'teambutt'
+    newButt.className = 'teamPNG'
     parent.appendChild(newDiv)
     let parentDiv = document.querySelector(`#team${i}`)
     parentDiv.appendChild(newButt)   
 }
 
 //array of img of teams
-let teamDivArray = document.querySelectorAll('.teambutt')
+let teamDivArray = document.querySelectorAll('.teamPNG')
 
 //event listener for each team
 
 $(document).ready(function(){
     //team info
-    $(".teambutt").click(async (evt) =>{
+    $(".teamPNG").click(async (evt) =>{
         let clicked = evt.target
         let currentID = clicked.id
         let mlbApi = `http://sports.core.api.espn.com/v2/sports/baseball/leagues/mlb/seasons/2023/teams/${currentID}?lang=en&region=us`
@@ -52,7 +52,7 @@ $(document).ready(function(){
 
     }); 
     //team stats
-    $(".teambutt").click(async (evt) =>{
+    $(".teamPNG").click(async (evt) =>{
         let clicked = evt.target
         let currentID = clicked.id
         let mlbStats = `http://sports.core.api.espn.com/v2/sports/baseball/leagues/mlb/seasons/2023/types/2/teams/${currentID}/statistics?lang=en&region=us`
